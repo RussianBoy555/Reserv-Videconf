@@ -1,0 +1,12 @@
+<h2>Panel de Usuario</h2>
+ 
+
+<form method= "POST">
+{% csrf_token %}
+    {{form.as_p}}
+<button>
+    Registrarse
+</button>
+{{error}}
+</form>
+

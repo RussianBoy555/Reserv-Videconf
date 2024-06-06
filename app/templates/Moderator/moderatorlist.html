@@ -1,0 +1,33 @@
+{% load static %}
+
+
+    <div class = "card card-default"> 
+        <div class = "card-header"> 
+            <h3 class = "car-title"> 
+                <i class = "fas fa-search"></i>
+                Listado de Moderadores
+            </h3>
+        </div>   
+
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre del Moderador</th>
+                        <th scope="col">Número de telefono</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for c in object_list %}
+                    <tr>
+                        <td> {{c.moderatorName}} </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+    </div>

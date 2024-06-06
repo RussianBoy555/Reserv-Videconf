@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva de Videoconferencia</title>
+    <!-- Aquí puedes incluir CSS para estilizar tu formulario -->
+</head>
+<body>
+    <h1>Reserva de Videoconferencia</h1>
+    <form action="/ruta_para_procesar_formulario" method="post">
+        <label for="nombre_vc">Nombre de la videoconferencia (requerido):</label>
+        <input type="text" id="nombre_vc" name="nombre_vc" required><br>
+        
+        <label for="motivo">Motivo (requerido):</label>
+        <select id="motivo" name="motivo" required>
+            <option value="mes">MES</option>
+            <option value="defensa_doctorado">Defensa de doctorado</option>
+            <!-- Agregar más opciones según sea necesario -->
+        </select><br>
+        
+        <label for="coordinador_nombre">Nombre del coordinador (requerido):</label>
+        <input type="text" id="coordinador_nombre" name="coordinador_nombre" required><br>
+        
+        <label for="coordinador_email">Email del coordinador (requerido):</label>
+        <input type="email" id="coordinador_email" name="coordinador_email" required><br>
+        
+        <label for="coordinador_telefono">Teléfono del coordinador (requerido):</label>
+        <input type="tel" id="coordinador_telefono" name="coordinador_telefono" required><br>
+        
+        <label for="area_solicitante">Área que solicita:</label>
+        <select id="area_solicitante" name="area_solicitante">
+            <option value="rectoria">Rectoría</option>
+            <option value="vicerrectoria">Vicerrectorías</option>
+            <!-- Agregar más opciones según sea necesario -->
+        </select><br>
+        
+        <label for="somos_creadores">¿Somos creadores de la VC?:</label>
+        <input type="checkbox" id="somos_creadores" name="somos_creadores"><br>
+        
+        <label for="enlace_vc">Enlace para la VC:</label>
+        <input type="url" id="enlace_vc" name="enlace_vc"><br>
+        
+        <label for="plataforma">Plataforma a emplear (requerido):</label>
+        <select id="plataforma" name="plataforma" required>
+            <option value="jitsi">Jitsi</option>
+            <option value="googlemeet">Google Meet</option>
+            <option value="microsoftteams">Microsoft Teams</option>
+        </select><br>
+        
+        <label for="fecha_hora_inicio">Fecha y hora de inicio (requerido):</label>
+        <input type="datetime-local" id="fecha_hora_inicio" name="fecha_hora_inicio" required><br>
+        
+        <label for="duracion_estimada">Duración estimada (requerido):</label>
+        <input type="number" id="duracion_estimada" name="duracion_estimada" min="1" required><br>
+        
+        <label for="cantidad_participantes">Cantidad de participantes (requerido):</label>
+        <input type="number" id="cantidad_participantes" name="cantidad_participantes" min="1" required><br>
+        
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones"></textarea><br>
+        
+        <input type="submit" value="Reservar">
+    </form>
+</body>
+</html>
